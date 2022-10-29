@@ -1,0 +1,40 @@
+:root{
+    --black:#000;
+    --cyan: #E7FAFE;
+    --white: #E4E6F1;
+    --orange:#FF7426;
+}
+
+.text-white{
+    color:var(--white)
+}
+
+.text-black{
+    color:var(--black)
+}
+
+.text-cyan{
+    color:var(--cyan)
+}
+
+.text-orange{
+    color:var(--orange)
+}
+
+
+.bg-white{
+    background-color:var(--white)
+}
+
+.bg-black{
+    background-color:var(--black)
+}
+
+.bg-cyan{
+    background-color:var(--cyan)
+}
+
+.bg-orange{
+    background-color:var(--orange)
+}
+
