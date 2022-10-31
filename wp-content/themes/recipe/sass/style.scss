@@ -1,2 +1,27 @@
-@import 'base/base.scss';
-@import 'layout/layout.scss';
+
+// = base load
+@import 'base/reset';
+@import 'base/colors';
+@import 'base/layout';
+@import 'base/typography';
+@import 'base/shape';
+@import 'base/iconography';
+
+// = component load
+@import 'components/header';
+@import 'components/wordpress';
+@import 'components/mainNavigation';
+@import 'components/mobileToggle';
+
+
+// = layout load
+@import 'layout/blog';
+@import 'layout/post'; 
+@import 'layout/detail';
+@import 'layout/home';
+
+
+body{
+    font-family: 'Inter', sans-serif;
+    font-size:1rem;
+}

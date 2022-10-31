@@ -1,0 +1,28 @@
+.header{
+    height:110px;
+    border-bottom:1px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .site-branding{
+        a{
+            font-family: 'Lobster','Inter',sans-serif;
+            font-size:1.5rem;
+            font-weight: 400;
+            color:var(--black);
+            text-decoration: none;
+            &::after{
+                content: attr(data-end);
+                color:var(--orange)!important;
+            }
+        }
+    }
+
+    @include breakpoint(mobile){
+        height: 80px;
+    }
+}
+
+.home .entry-header{
+    display: none;
+}

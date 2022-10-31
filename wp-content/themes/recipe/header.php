@@ -29,19 +29,19 @@
 	<div id="page" class="site">
 		<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'recipe'); ?></a>
 
-		<header id="masthead" class="site-header">
-			<div class="container">
+		<header id="masthead" class="header">
+			<div class="container flex flex-jc-sb flex-ai-ct">
 
 				<div class="site-branding">
 					<?php
 					the_custom_logo();
 					if (is_front_page() && is_home()) :
 					?>
-						<h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
+						<h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home" data-end="."><?php bloginfo('name'); ?></a></h1>
 					<?php
 					else :
 					?>
-						<p class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></p>
+						<p class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home" data-end="."><?php bloginfo('name'); ?></a></p>
 					<?php
 					endif;
 					$recipe_description = get_bloginfo('description', 'display');
@@ -52,30 +52,24 @@
 					<?php endif; ?>
 				</div><!-- .site-branding -->
 	
-				<nav id="site-navigation" class="main-navigation">
-					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e('Primary Menu', 'recipe'); ?></button>
-					<?php
-					wp_nav_menu(
-						array(
-							'theme_location' => 'menu-1',
-							'menu_id'        => 'primary-menu',
-						)
-					);
-					?>
+				<nav id="site-navigation" class="main-navigation  flex flex-jc-sb">
+					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><svg height="32px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/></svg></button>
+					<div class="mobile-menu flex flex-jc-sb">
+						<?php
+							wp_nav_menu(
+								array(
+									'theme_location' => 'menu-1',
+									'menu_id'        => 'primary-menu',
+								)
+							);
+							wp_nav_menu(
+								array(
+									'theme_location' => 'menu-2',
+									'menu_id'        => 'social-menu',
+								)
+							);
+						?>
+					</div>
 				</nav><!-- #site-navigation -->
 			</div>
 		</header><!-- #masthead -->
-		<div class="row">
-			<div class="col bg-black text-white">01</div>
-			<div class="col bg-black text-white">02</div>
-			<div class="col bg-black text-white">03</div>
-			<div class="col bg-black text-white">04</div>
-			<div class="col bg-black text-white">05</div>
-			<div class="col bg-black text-white">06</div>
-			<div class="col bg-black text-white">07</div>
-			<div class="col bg-black text-white">08</div>
-			<div class="col bg-black text-white">09</div>
-			<div class="col bg-black text-white">10</div>
-			<div class="col bg-black text-white">11</div>
-			<div class="col bg-black text-white">12</div>
-		</div>

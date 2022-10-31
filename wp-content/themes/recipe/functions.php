@@ -50,6 +50,8 @@ function recipe_setup() {
 	register_nav_menus(
 		array(
 			'menu-1' => esc_html__( 'Primary', 'recipe' ),
+			'menu-2' => esc_html__( 'Social', 'recipe' ),
+			'menu-3' => esc_html__( 'Footer', 'recipe' ),
 		)
 	);
 
@@ -142,6 +144,7 @@ function recipe_scripts() {
 	wp_style_add_data( 'recipe-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'recipe-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'recipe-mobileToggle', get_template_directory_uri() . '/js/menuToggle.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -176,3 +179,45 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+function recipe_post_type() {
+	register_post_type('wporg_product',
+		array(
+			'labels'      => array(
+				'name'          => __('Recipes'),
+				'singular_name' => __('recipe'),
+			),
+			'public'      => true,
+			'has_archive' => true,
+			'show_in_rest' => true,
+			'menu_icon' => 'dashicons-carrot',
+			'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments', 'author' ),
+			'taxonomies'  => array( 'category' ),
+		)
+	);
+}
+add_action('init', 'recipe_post_type');
+
+add_filter( 'allowed_block_types', 'recipe_allowed_block_types' );
+ 
+function recipe_allowed_block_types( $allowed_blocks ) {
+ 
+  return array(
+    'core/image',
+    'core/paragraph',
+    'core/heading',
+    'core/list',
+    'core/columns',
+	'core/gallery',
+	'core/list',
+	'core/cover',
+	'core/media-text',
+	'core/buttons',
+	'core/gallery',
+	'core/latest-posts',
+	'core/search',
+	'core/shortcode',
+	'core/group',
+	'nextend/smartslider3'
+  );
+ 
+}

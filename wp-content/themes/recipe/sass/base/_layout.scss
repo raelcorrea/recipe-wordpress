@@ -24,30 +24,21 @@ $medias:(
 
 .container{
     width: 100%;
-    margin:0 1rem;
-    @include breakpoint(tablet){
-        margin: 0 2rem;
-    }
+    margin: auto;
+    max-width: 90%;
     @include breakpoint(laptop){
-        margin: 0 12.5rem;
+        max-width: 1200px;
     }
 }
 
-// = columns
 
-.row{
-    width:100%;
+// = flexbox
+.flex{
     display: flex;
-    gap:1rem;
-    flex-wrap: wrap;
-    @include breakpoint(tablet){
-        gap:1.5rem;
+    &-ai-ct{
+        align-items: center;
     }
-    .col{
-        width:100%;
-        max-width: 20%;
-        @include breakpoint(tablet){
-            max-width: 12.5%;
-        }
+    &-jc-sb{
+        justify-content: space-between;
     }
 }

@@ -1,0 +1,86 @@
+.main-navigation{
+    .mobile-menu{
+        gap:4rem;
+        @include breakpoint(mobile){
+            display: flex;
+            gap:0;
+            background: #FFF;
+            transition: linear 300ms;
+            position: absolute;
+            flex-wrap: wrap;
+            flex-direction: column;
+            left: 0;
+            top: 80px;
+            height:0;
+            z-index: 1;
+            width: 100vw;
+            &.active{
+                height: calc(100vh - 80px);
+                .menu{
+                    padding:1.5rem;
+                    display: block;
+                    position: relative;
+                    z-index: 1;
+                    width: 100%;
+                    li a{
+                        line-height: 4rem;
+                        font-size:1.5rem;
+                        border-bottom: 1px solid #DFDFDF;
+                        display: block;
+                    }
+                }
+
+                #social-menu{
+                    display: flex;
+                    z-index: 0;
+                    li a{
+                        line-height: 4rem;
+                        font-size:1.5rem;
+                        border-bottom: 0;
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+
+    @include breakpoint(laptop){
+        gap: 3rem;
+    }
+    .menu{
+        width: 100%;
+        display: none;
+        padding:0;
+        margin:0;
+        list-style: none;
+        @include breakpoint(laptop){
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        li{
+            a{
+                text-decoration: none;
+                font-size:1rem;
+                color:var(--black);
+                transition: linear 300ms;
+                &:hover{
+                    color:var(--orange);
+                }
+                @include breakpoint(laptop){
+                    line-height: 1.5rem;
+                }
+
+            }
+        }
+   }
+   
+   #social-menu {
+        li a span{
+            display: none;
+            margin-left: 3rem;
+        }
+    }
+}
