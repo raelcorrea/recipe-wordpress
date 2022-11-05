@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'codeinwp/wp-menu-icons',
-        'pretty_version' => 'v0.13.0',
-        'version' => '0.13.0.0',
-        'reference' => '789aafe06b2183d940c0bdc43f6f81a49f84abc0',
+        'pretty_version' => 'v0.13.1',
+        'version' => '0.13.1.0',
+        'reference' => '1252e761a4371ad4861e09f0431dc53f71be2ddc',
         'type' => 'wordpress-plugin',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -53,9 +53,9 @@
             'dev_requirement' => false,
         ),
         'codeinwp/wp-menu-icons' => array(
-            'pretty_version' => 'v0.13.0',
-            'version' => '0.13.0.0',
-            'reference' => '789aafe06b2183d940c0bdc43f6f81a49f84abc0',
+            'pretty_version' => 'v0.13.1',
+            'version' => '0.13.1.0',
+            'reference' => '1252e761a4371ad4861e09f0431dc53f71be2ddc',
             'type' => 'wordpress-plugin',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
