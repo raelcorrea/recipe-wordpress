@@ -1,0 +1,132 @@
+{
+	"version": 2,
+	"settings": {
+		"appearanceTools": true,
+		"color": {
+			"palette": [
+				{
+					"slug": "background",
+					"color": "#1d2327",
+					"name": "Background"
+				},
+				{
+					"slug": "foreground",
+					"color": "#f0f0f1",
+					"name": "Foreground"
+				},
+				{
+					"slug": "primary",
+					"color": "#5093d4",
+					"name": "Primary"
+				},
+				{
+					"slug": "secondary",
+					"color": "#153956",
+					"name": "Secondary"
+				}
+			],
+			"gradients": [
+				{
+					"slug": "",
+					"gradient": "",
+					"name": ""
+				}
+			]
+		},
+		"spacing": {
+            "margin": false,
+            "padding": false,
+            "blockGap": null,
+            "units": [ "px", "em", "rem", "vh", "vw" ]
+        },
+		"layout": {
+			"contentSize": "1200px",
+			"wideSize": "1400px"
+		},
+		"typography": {
+			"dropCap": true,
+			"fontFamilies": [
+				{
+					"name": "Inter",
+					"slug": "inter-sans",
+					"fontFamily": "'Inter', sans-serif"
+				},
+				{
+					"name": "Lobster",
+					"slug": "lobster-sans",
+					"fontFamily": "'Lobster', sans-serif"
+				}
+			],
+			"fontSizes":[
+				{
+					"slug": "small",
+					"size": "0.5rem",
+					"name": "Small"
+				},
+				{
+					"slug": "normal",
+					"size": "1rem",
+					"name": "Normal"
+				},
+				{
+					"slug": "medium",
+					"size": "1.5rem",
+					"name": "Medium"
+				},
+				{
+					"slug": "large",
+					"size": "2rem",
+					"name": "Large"
+				}
+			]
+		},
+		"custom": {}
+	},
+	"styles": {
+		"spacing":{
+			"blockGap": "",
+			"margin": {
+				"top": "",
+				"right": "",
+				"bottom": "",
+				"left": ""
+			}
+		},
+		"color": {
+			"background": "",
+			"text": ""
+		},
+		"typography": {
+			"fontSize": "",
+			"fontFamily": "",
+			"lineHeight": ""
+		},
+		"elements": {
+			"link": {
+				"color": {
+					"text": ""
+				}
+			}
+		},
+		"blocks": {}
+	},
+	"templateParts": [
+		{
+			"name": "header",
+			"title": "Header",
+			"area": "header"
+		},
+		{
+			"name": "footer",
+			"title": "Footer",
+			"area": "footer"
+		}
+	],
+	"customTemplates": [
+		{
+			"name": "",
+			"title": "",
+			"postTypes": [ "post","page" ]
+		}
+	]
+}
